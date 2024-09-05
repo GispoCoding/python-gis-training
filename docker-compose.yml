@@ -1,8 +1,15 @@
 services:
   gis:
     container_name: gis-lab
-    build: .
+    hostname: linux
+    build:
+      context: .
+      args:
+        USER: lab-user
+        ENV_NAME: gis
     ports:
       - 8888:8888
+    volumes:
+      - ./:/home/lab-user/gis-lab
     stdin_open: true
     tty: true
