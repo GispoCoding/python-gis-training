@@ -4,17 +4,20 @@ ARG USER=lab-user
 ARG ENV_NAME=gis
 ARG DEBIAN_FRONTEND=noninteractive
 
+EXPOSE 8888
+
 RUN apt-get update && apt-get install -y vim
 
-EXPOSE 8888
+RUN useradd --create-home $USER
+
+# Only include path in prompt (Emulate what anaconda prompt looks like on
+# windows)
+RUN echo "PS1='\$PWD> '" >> /home/$USER/.bashrc
 
 WORKDIR /home/$USER/gis-lab
 
-COPY env.yml ./env.yml
-
-RUN useradd -m $USER && chown -R $USER /home/$USER
+COPY environment.yml ./environment.yml
 
 USER $USER
 
-RUN conda env create --file env.yml --name $ENV_NAME \
-&& conda init
+RUN conda env create --file environment.yml --name $ENV_NAME && conda init
