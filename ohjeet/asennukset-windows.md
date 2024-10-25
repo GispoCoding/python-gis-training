@@ -23,7 +23,8 @@ Noudata Minicondan omia [asennusohjeita](https://docs.anaconda.com/miniconda/#qu
 Condan pitäisi nyt olla asennettuna,
 ja sillä pitäisi voida luoda ympäristöjä sekä asentaa paketteja.
 
-Avaa siis ensin **Anaconda Prompt (miniconda3)**
+Avaa siis ensin **Anaconda Prompt (miniconda3)**.
+Tämän jälkeen aja alla olevat komennot auenneella komentorivillä.
 
 Luo testiympäristö ja aktivoi se:
 ```
