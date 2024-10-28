@@ -13,16 +13,16 @@ Asennukseen on sekä graafinen- että komentorivikäyttöliittymä.
 
 Noudata Minicondan omia [asennusohjeita](https://docs.anaconda.com/miniconda/#quick-command-line-install):
 
-1. Valitse yllä linkatulla ohjesivulla välilehti **Windows Command Prompt**
-1. Kopioi ohjesivuilta löytyvät kommennot ja ajaa komennot komentorivillä painamalla enteriä.
-1. Asennusikkuna saatta aueta ja voit sulkea tämän kun asennus on valmis.
+1. Valitse yllä linkatulla ohjesivulla välilehti **Windows Command Prompt**.
+1. Kopioi ohjesivuilta löytyvät kommennot ja aja komennot komentorivillä painamalla enteriä.
+1. Asennusikkuna saattaa aueta ja voit sulkea tämän kun asennus on valmis.
 1. Voit asennuksen jälkeen sulkea Windows Command Promptin, jotta et sekoita sitä Anaconda Promptiin.
 
 ### Tarkista toimiiko asennus
 
 Condalla pitäisi nyt voida luoda ympäristöjä sekä asentaa paketteja.
 
-> Huom! Jos tietokoneen varsinaisella käyttäjällä ei ole admin-oikeuksia (eli
+> **Huom!** Jos tietokoneen varsinaisella käyttäjällä ei ole admin-oikeuksia (eli
 > esim. organisaation ict-tuki hoitaa asennuksen), täytyy siis seuraavien
 > toimintojen onnistua peruskäyttäjällä, ilman admin-oikeuksia.
 
