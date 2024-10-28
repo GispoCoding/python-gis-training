@@ -15,6 +15,7 @@ Noudata Minicondan omia [asennusohjeita](https://docs.anaconda.com/miniconda/#qu
 
 1. Valitse yllä linkatulla ohjesivulla välilehti **Windows Command Prompt**
 1. Aja ohjeen komennot komentorivillä
+1. TODO jotain huomioitavaa?
 
 ### Tarkista toimiiko asennus
 
