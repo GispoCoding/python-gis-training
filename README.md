@@ -5,7 +5,7 @@ Tämä repositorio sisältää Python-GIS oppimateriaalia.
 Ohjeita:
 
 - [Asennusohjeet - windows](./ohjeet/asennukset-windows.md)
-- [Kurssiympäristön käyttöönotto](./ohjeet/kurssiympariston-kayttoonotto.md)
+- [Kurssiympäristö ja sen käyttöönotto](./ohjeet/kurssiymparisto.md)
 - [Conda-paketinhallinnan perusteet](./ohjeet/condan-perusteet.md)
 
 Kehittäjälle:
