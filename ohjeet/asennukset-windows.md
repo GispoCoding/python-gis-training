@@ -22,6 +22,10 @@ Noudata Minicondan omia [asennusohjeita](https://docs.anaconda.com/miniconda/#qu
 
 Condalla pitäisi nyt voida luoda ympäristöjä sekä asentaa paketteja.
 
+> Huom! Jos tietokoneen varsinaisella käyttäjällä ei ole admin-oikeuksia (eli
+> esim. organisaation ict-tuki hoitaa asennuksen), täytyy siis seuraavien
+> toimintojen onnistua peruskäyttäjällä, ilman admin-oikeuksia.
+
 Avaa ensin conda-komentorivi, eli **Anaconda Prompt** jonka löydät Windowsilla esimerkiksi etsimällä sanalla "Anaconda".
 Tämän jälkeen aja alla olevat komennot auenneessa komentorivi-ikkunassa.
 
