@@ -7,7 +7,7 @@ Windows -käyttöjärjestelmässä ohjelman mukana asentuu myös
 Anaconda prompt -komentorivi, jolla condaa päästään käyttämään.
 
 Asenna [Miniconda3](https://docs.anaconda.com/miniconda/) conda-distribuutio.
-Asennukseen on sekä graaffinen- että komentorivikäyttöliittymä.
+Asennukseen on sekä graafinen- että komentorivikäyttöliittymä.
 
 ### Asennus komentorivillä
 
