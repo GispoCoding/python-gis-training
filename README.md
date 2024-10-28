@@ -1,13 +1,9 @@
 # python-gis-lab
 
-Pythonin perusteita paikkatietonäkökulmasta
-
-<!-- TODO: think about separating some themes into separate files. For example
-into docs/ -->
-
-## Materiaalien lataaminen
-
-## Kurssiympäristön käyttöönotto
+Ohjeita:
+- [Asennusohjeet - windows](./ohjeet/asennukset-windows.md)
+- [Kurssiympäristön käyttöönotto](./ohjeet/kurssiympariston-kayttoonotto.md)
+- [Conda-paketinhallinnan perusteet](./ohjeet/condan-perusteet.md)
 
 ## Kurssiympäristö kontissa
 
