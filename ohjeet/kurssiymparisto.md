@@ -48,9 +48,9 @@ Työhakemistolla (ja täten myös komentorivillä navigoinnilla) on merkitystä
 sellaisten komentojen kannalta, jotka täytyy tai kannattaa suorittaa tietyssä
 hakemistossa. Yksi esimerkki tällaisesta komennosta on kurssilla käytettävä
 **JupyterLab**-ohjelmointityökalu: JupyterLabin selainkäyttöliittymä aukeaa
-siihen hakemistoon, jossa komento ajetaan. Kannattaa siis aina "avata" Jupyter
-Lab ajamalla komento `jupyter lab` siinä hakemistossa, jossa aiot myös
-työskennellä.
+siihen hakemistoon, jossa ohjelman käynnistävä `jupyter lab` -komento ajetaan.
+Kannattaa siis aina käynnistää JupyterLab ajamalla `jupyter lab` siinä
+hakemistossa, jossa aiot myös työskennellä.
 
 Navigoi siis kurssihakemistoon. Jos et muista ulkoa minne tallensit
 kurssihakemiston, voit etsiä sen **Resurssienhallinnalla**. TODO Miten saada
