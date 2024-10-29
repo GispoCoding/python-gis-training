@@ -4,11 +4,21 @@
 
 ## Kurssihakemisto ja sen lataaminen
 
-Lataa kurssihakemisto kotihakemistoosi. Älä käytä verkkolevyä.
+<!-- TODO Add link to download (when we know how this is downloaded)... -->
 
-TODO lisää linkki
+<!-- TODO ...and add filename of the zip to instructions -->
 
-## Komentoriviperusteet (windows)
+Lataa kurssihakemisto ja pura `.zip`-tiedosto kotihakemistoosi, tai jonnekkin
+muualle, jonne löydät myöhemmin. Älä kuitenkaan käytä verkkolevyä.
+
+Windows-käyttöjärjestelmässä kotihakemistolla tarkoitetaan hakemistoa, jonka
+tiedostopolku on seuraavanlainen:
+
+```console
+C:\Users\<käyttäjätunnus>
+```
+
+## Komentorivi ja kurssihakemistoon navigointi (windows)
 
 ### Anaconda Prompt
 
@@ -18,60 +28,112 @@ Prompt**-komentoriviä. Anaconda Promptin löydät Windowsilla esimerkiksi
 etsimällä sanalla "Anaconda". Jos ohjelma ei ole asennettuna, asenna se
 [ohjeiden mukaan](./asennukset-windows.md).
 
-Seuraavassa tutustutaan komentorivin perusteisiin ja käynnistetään varsinainen
-kurssin ohjelmointiympäristö. Avaa nyt **Anaconda Prompt**. Avautuvassa
-ikkunassa näkyy teksti `(base)`, sekä tiedostopolku. `(base)` tarkoittaa sitä,
-että tällä hetkellä aktiivinen conda-**ympäristö** on nimeltään `base`, kun taas
-tiedostopolku näyttää polun siihen hakemiston, jossa komentorivi on nyt
-aktiivinen. Kulloinkin aktiivisena olevaa hakemistoa kutsutaan
-**työhakemistoksi** (working directory), ja sitä voidaan muuttaa navigoimalla
-johonkin muuhun hakemistoon.
+Avaa nyt **Anaconda Prompt**. Avautuvassa ikkunassa näkyy teksti `(base)`, sekä
+tiedostopolku. `(base)` tarkoittaa sitä, että tällä hetkellä aktiivinen
+conda-**ympäristö** on nimeltään `base`, kun taas tiedostopolku näyttää polun
+siihen hakemiston, jossa komentorivi on nyt aktiivinen. Kulloinkin aktiivisena
+olevaa hakemistoa kutsutaan **työhakemistoksi** (working directory), ja sitä
+voidaan muuttaa navigoimalla johonkin muuhun hakemistoon.
 
 ### Navigointi kurssihakemistoon
 
-Tällä kurssilla käytetään enimmäkseen conda-komentoja, mutta ainakin kaksi
+Tällä kurssilla käytetään lähes pelkästään conda-komentoja, mutta ainakin kaksi
 muutakin komentoa kannataa opetella: `dir` ja `cd`.
 
-`dir`-komennolla voit listata työhakemiston tiedostot ja hakemistot.
+- `dir`-komennolla voit listata työhakemiston tiedostot ja hakemistot.
+- `cd` (change directory) vaihtaa työhakemistoa komennolle argumenttina
+  annettuun hakemistoon.
 
-`cd` (change directory) vaihtaa työhakemistoa johonkin toiseen hakemistoon.
-
-Työhakemistolla on merkitystä erityisesti sellaisten komentojen kannalta, jotka
-jostain syystä täytyy tai kannattaa suorittaa tietyssä hakemistossa. Yksi
-esimerkki tällaisesta komennosta on kurssilla käytettävä
-**JupyterLab**-ohjelmointityökalu: JupyterLabin oma tiedostoselain nimittäin
-aukeaa siihen hakemistoon, jossa komento ajetaan. Kannattaa siis aina "avata"
-Jupyter Lab ajamalla komento `jupyter lab` siinä hakemistossa, jossa aiot myös
+Työhakemistolla (ja täten myös komentorivillä navigoinnilla) on merkitystä
+sellaisten komentojen kannalta, jotka täytyy tai kannattaa suorittaa tietyssä
+hakemistossa. Yksi esimerkki tällaisesta komennosta on kurssilla käytettävä
+**JupyterLab**-ohjelmointityökalu: JupyterLabin selainkäyttöliittymä aukeaa
+siihen hakemistoon, jossa komento ajetaan. Kannattaa siis aina "avata" Jupyter
+Lab ajamalla komento `jupyter lab` siinä hakemistossa, jossa aiot myös
 työskennellä.
 
 Navigoi siis kurssihakemistoon. Jos et muista ulkoa minne tallensit
 kurssihakemiston, voit etsiä sen **Resurssienhallinnalla**. TODO Miten saada
 absoluuttinen polku windowsilla?
 
-Jos tallensit kurssihakemiston jonnekkin kotihakemistoosi, on polun alku muotoa:
+Jos tallensit kurssihakemiston jonnekkin kotihakemistosi sisälle, on polun alku
+muotoa:
 
-```
-C:\Users\<käyttäjänimi>\...
+```console
+C:\Users\<käyttäjätunnus>\...
 ```
 
 Jos kurssihakemistosi on esimerkisi suoraan kotihakemistossasi, voit siirtyä
 sinne seuraavalla komennolla:
 
-<!-- TODO check path (the repo name) when downloaded from release -->
+<!-- TODO check path (i.e. the repo name) when downloaded -->
 
-```
+```console
 cd \Users\<käyttäjänimi>\python-gis-training
 ```
 
 ## Kurssiympäristön luominen
 
-Kun olet päässyt kurssihakemistoon, voit luoda kurssiympäristön seuraavalla
-komennolla:
+Kun olet päässyt kurssihakemistoon, voit luoda kurssin Python-ympäristön
+seuraavalla komennolla:
+
+```console
+conda env create --file environment.yml --name gis
+```
+
+`conda env create` -komennolla luodaan uusi conda-ympärisö. Huomaa ettemme
+erittele erikseen ympäristöön asennettavia paketteja, vaan conda lukee ne
+suoraan `--file`-vivulle parametrina annetusta `environment.yml`-tiedostosta.
+Tiedosto löytyy kurssihakemistosta, eli komento onnistuu kun se ajetaan oikeassa
+hakemistossa. Lisäksi kurssin Python-ympäristölle annetaan nimeksi `gis`
+käyttämällä `--name`-vipua.
+
+Komennon suorituksessa saattaa mennä hetki, kun useita paketteja ladataan. Kun
+ympäristö on valmis, Anaconda Promptissa pitäisi näkyä:
 
 ```
-conda env create --file environment.yml
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate gis
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
 ```
 
-`conda env create` -komennolla luodaan uusi conda-ympärisö
+## Ohjelmoinnin aloitus JupyterLabissa
 
-### JupyterLab
+Kun ympäristö on luotu, aktivoi se:
+
+```console
+conda activate gis
+```
+
+Nyt komentorivillä pitäisi työhakemiston edessä näkyä `(gis)`, eli aktiivinen
+conda-ympäristö on `gis`.
+
+Voit käynnistää JupyterLab-ohjelmointiympäristön seuraavalla komennolla (huomaa
+väli):
+
+```console
+jupyter lab
+```
+
+JupyterLabin pitäisi käynnistyä internet-selaimessa. Jos selainsivu ei aukea
+automaattisesti, kopioi komentorivi-ikkunassa näkyvä linkki selaimen
+URL-kenttään.
+
+## Kurssiympäristön käyttö jatkossa
+
+Kun haluat palata käyttämään mitä vain aiemmin luomaasi conda-ympäristöä
+(esimerkiksi kurssiympäristöä), askeleet ovat varsin yksinkertaiset:
+
+1. Avaa **Anaconda Prompt**
+1. Navigoi hakemistoon jossa työskentelet
+1. Aktivoi haluamasi ympäristö `conda activate` -komennolla (anna ympäristön
+   nimi argumenttina, esim `conda activate gis`)
+1. Kurssiympäristön tapauksessa aja komento `jupyter lab`
