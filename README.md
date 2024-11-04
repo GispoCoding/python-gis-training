@@ -14,8 +14,12 @@ Kehittäjälle:
 
 ## Lisenssit
 
-Luennot ja harjoitukset on julkaistu avoimella lisenssillä. Käytettävä lisenssi
-on
+Kurssimateriaali julkaistu avoimella lisenssillä. Käytettävä lisenssi on
 [Creative Commons Nimeä-EiMuutoksia 4.0](https://creativecommons.org/licenses/by-nd/4.0/deed.fi).
 
-Harjoituksissa käytettävät aineistot:
+Materiaalissa käytetyt aineistot:
+
+- kunnat.gpkg, ladattu tilastokeskuksen
+  [WFS-palvelusta](https://geo.stat.fi/geoserver/tilastointialueet/wfs).
+  Lisenssi:
+  [Creative Commons Nimeä 4.0](https://creativecommons.org/licenses/by/4.0/deed.fi).
