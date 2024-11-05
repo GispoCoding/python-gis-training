@@ -23,3 +23,7 @@ Materiaalissa käytetyt aineistot:
   [WFS-palvelusta](https://geo.stat.fi/geoserver/tilastointialueet/wfs).
   Lisenssi:
   [Creative Commons Nimeä 4.0](https://creativecommons.org/licenses/by/4.0/deed.fi).
+- lightnings.csv, ladattu Ilmatieteen laitoksen
+  [WFS-palvelusta](https://en.ilmatieteenlaitos.fi/open-data-manual-fmi-wfs-services).
+  Lisenssi:
+  [Creative Commons Nimeä 4.0](https://creativecommons.org/licenses/by/4.0/deed.fi).
