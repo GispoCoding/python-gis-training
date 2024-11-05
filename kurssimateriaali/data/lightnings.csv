@@ -1,4 +1,4 @@
-time,abs_peak_current,latitude,longitude
+time,abs_peak_current_ka,latitude,longitude
 1717200010,4.0,68.9186,22.19
 1717200010,5.0,68.8757,22.2367
 1717200010,2.0,68.7596,22.2646
