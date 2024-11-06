@@ -41,7 +41,7 @@ voidaan muuttaa navigoimalla johonkin muuhun hakemistoon.
 ### Navigointi kurssihakemistoon
 
 Tällä kurssilla käytetään lähes pelkästään conda-komentoja, mutta ainakin kaksi
-muutakin komentoa kannataa opetella: `dir` ja `cd`.
+muutakin komentoa kannattaa opetella: `dir` ja `cd`.
 
 - `dir`-komennolla voit listata työhakemiston tiedostot ja hakemistot.
 - `cd` (change directory) vaihtaa työhakemistoa komennolle argumenttina
