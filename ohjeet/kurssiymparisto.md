@@ -6,10 +6,13 @@
 
 <!-- TODO add filename of the zip to instructions -->
 
-Lataa kurssihakemisto ja pura `.zip`-tiedosto kotihakemistoosi, tai jonnekkin
-muualle, jonne löydät myöhemmin. Älä kuitenkaan käytä verkkolevyä.
+Lataa kurssimateriaali alla olevasta linkistä, ja pura `.zip`-tiedosto paikkaan
+josta löydät sen kurssilla: esimerkiksi kotihakemistoosi. Älä kuitenkaan käytä
+verkkolevyä.
 
-<!-- TODO test windows filepaths -->
+[Kurssimateriaali.zip](https://github.com/GispoCoding/python-gis-training/archive/refs/heads/main.zip)
+
+<!-- TODO what would be a sensible location on windows? -->
 
 Windows-käyttöjärjestelmässä kotihakemistolla tarkoitetaan hakemistoa, jonka
 tiedostopolku on seuraavanlainen:
@@ -69,7 +72,7 @@ sinne seuraavalla komennolla:
 <!-- TODO check path (i.e. the repo name) when downloaded -->
 
 ```console
-cd \Users\<käyttäjänimi>\python-gis-training
+cd C:\Users\<käyttäjänimi>\python-gis-training
 ```
 
 ## Kurssiympäristön luominen
