@@ -1,15 +1,15 @@
-<!-- TODO overall shorten this file -->
+<!-- TODO overall shorten this file? -->
 
 # Kurssiympäristö
 
 ## Kurssihakemisto ja sen lataaminen
 
-<!-- TODO Add link to download (when we know how this is downloaded)... -->
-
-<!-- TODO ...and add filename of the zip to instructions -->
+<!-- TODO add filename of the zip to instructions -->
 
 Lataa kurssihakemisto ja pura `.zip`-tiedosto kotihakemistoosi, tai jonnekkin
 muualle, jonne löydät myöhemmin. Älä kuitenkaan käytä verkkolevyä.
+
+<!-- TODO test windows filepaths -->
 
 Windows-käyttöjärjestelmässä kotihakemistolla tarkoitetaan hakemistoa, jonka
 tiedostopolku on seuraavanlainen:
@@ -89,7 +89,7 @@ hakemistossa. Lisäksi kurssin Python-ympäristölle annetaan nimeksi `gis`
 käyttämällä `--name`-vipua.
 
 Komennon suorituksessa saattaa mennä hetki, kun useita paketteja ladataan. Kun
-ympäristö on valmis, Anaconda Promptissa pitäisi näkyä:
+ympäristö on valmis, komentorivillä pitäisi näkyä:
 
 ```
 Preparing transaction: done
@@ -132,8 +132,8 @@ URL-kenttään.
 Kun haluat palata käyttämään mitä vain aiemmin luomaasi conda-ympäristöä
 (esimerkiksi kurssiympäristöä), askeleet ovat varsin yksinkertaiset:
 
-1. Avaa **Anaconda Prompt**
-1. Navigoi hakemistoon jossa työskentelet
+1. Navigoi komentorivillä hakemistoon jossa työskentelet (windowsilla käytä
+   komentorivinä **Anaconda Promptia**)
 1. Aktivoi haluamasi ympäristö `conda activate` -komennolla (anna ympäristön
    nimi argumenttina, esim `conda activate gis`)
 1. Kurssiympäristön tapauksessa aja komento `jupyter lab`
