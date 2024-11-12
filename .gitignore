@@ -1,5 +1,9 @@
 *.png
 *.html
+*.gpkg
+*.csv
+!kurssimateriaali/data/kunnat.gpkg
+!kurssimateriaali/data/lightnings.csv
 .swp
 # Byte-compiled / optimized / DLL files
 __pycache__/
