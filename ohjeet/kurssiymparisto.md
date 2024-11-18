@@ -5,15 +5,15 @@
 Lataa kurssimateriaali alla olevasta linkistä, ja pura `.zip`-tiedosto
 hakemiston `C:\Ohjelmat\miniconda3` alle. Tietokoneellesi tehty Python-asennus
 on tehty siten, että pythonin kanssa työskentely kannattaa tehdä tämän
-hakemiston sisällä.
+hakemiston alla.
 
-[Kurssimateriaali.zip](https://github.com/GispoCoding/python-gis-training/archive/refs/heads/main.zip)
+[Kurssimateriaali.zip](https://github.com/GispoCoding/python-gis-training/archive/refs/heads/2024-11.zip)
 
 Kun olet purkanut kurssimateriaalin oikeaan paikkaan, on tiedostopolku
 kurssimateriaaliin seuraavanlainen:
 
 ```
-C:\Ohjelmat\miniconda3\python-gis-training-main
+C:\Ohjelmat\miniconda3\python-gis-training-2024-11
 ```
 
 > **Huom!** Riippuen siitä, miten purit tiedoston, saattaa varsinainen
@@ -21,7 +21,7 @@ C:\Ohjelmat\miniconda3\python-gis-training-main
 > sisällä. Tämä ei haittaa. Alla esimerkkipolku tässä tapauksessa:
 
 ```
-C:\Ohjelmat\miniconda3\python-gis-training-main\python-gis-training-main
+C:\Ohjelmat\miniconda3\python-gis-training-2024-11\python-gis-training-2024-11
 ```
 
 ## Komentorivi ja kurssihakemistoon navigointi (windows)
@@ -51,7 +51,7 @@ muutakin komentoa kannattaa opetella: `dir` ja `cd`.
 
 Työhakemistolla (ja täten myös komentorivillä navigoinnilla) on merkitystä
 tilanteissa, joissa komentoja täytyy tai kannattaa suorittaa tietyssä
-hakemistossa. Python-ympäristön luonti, tai kurssilla käytettävän
+hakemistossa. Python-ympäristön luonti tai kurssilla käytettävän
 **JupyterLab**-ohjelmointityökalun käynnistys ovat esimerkkejä tällaisista
 tilanteista.
 
@@ -59,14 +59,14 @@ Navigoi siis kurssihakemistoon. Koska tiedät jo minne kurssihakemisto on
 tallennettu, voit siirtyä sinne seuraavalla komennolla:
 
 ```
-cd C:\Ohjelmat\miniconda3\python-gis-training-main
+cd C:\Ohjelmat\miniconda3\python-gis-training-2024-11
 ```
 
-Jos `dir`-komento näyttää, että hakemiston sisällä on vielä yksi
-`python-gis-training-main`-niminen hakemisto, siirry vielä sinne:
+*Jos* `dir`-komento näyttää, että hakemiston sisällä on vielä yksi
+`python-gis-training-2024-11`-niminen hakemisto, siirry vielä sinne:
 
 ```
-cd python-gis-training-main
+cd python-gis-training-2024-11
 ```
 
 ## Kurssiympäristön luominen
@@ -74,7 +74,7 @@ cd python-gis-training-main
 Kun olet päässyt kurssihakemistoon, voit luoda kurssin Python-ympäristön
 seuraavalla komennolla:
 
-```console
+```
 conda env create --file environment.yml --name gis
 ```
 
@@ -106,7 +106,7 @@ Executing transaction: done
 
 Kun ympäristö on luotu, aktivoi se:
 
-```console
+```
 conda activate gis
 ```
 
@@ -114,9 +114,9 @@ Nyt komentorivillä pitäisi työhakemiston edessä näkyä `(gis)`, eli aktiivi
 conda-ympäristö on `gis`.
 
 Voit käynnistää JupyterLab-ohjelmointiympäristön seuraavalla komennolla (huomaa
-väli):
+väli ja pienet kirjaimet):
 
-```console
+```
 jupyter lab
 ```
 
@@ -139,3 +139,66 @@ Kun haluat palata käyttämään mitä vain aiemmin luomaasi conda-ympäristöä
 1. Aktivoi haluamasi ympäristö `conda activate` -komennolla (anna ympäristön
    nimi argumenttina, esim `conda activate gis`)
 1. Kurssiympäristön tapauksessa aja komento `jupyter lab`
+
+## Condan käyttö jatkossa
+
+Tässä vielä muutama esimerkki hyödyllisistä conda-komennoista.
+
+Tämä materiaali ei edes yritä kattaa kaikkia condan tominnallisuuksia.
+Lisätietoa löydät monestakin paikasta googlaamalla, mutta hyvä paikka aloittaa
+on
+[condan dokumentaatio](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html#).
+Kokeile myös ajaa komentorivillä:
+
+```
+conda --help
+```
+
+### Ympäristöjen hallinta
+
+Uuden tyhjän ympäristön luonti:
+
+```
+conda create -n <ympäriston nimi>
+```
+
+Ympäristön luonti tiedostosta:
+
+```
+conda env create --file <tiedostopolku>
+```
+
+Ympäristön aktivointi:
+
+```
+conda activate <ympäristön nimi>
+```
+
+Olemassaolevien ympäristöjen listaus:
+
+```
+conda env list
+```
+
+Ympäristön poisto:
+
+```
+conda env remove -n <ympäristön nimi>
+```
+
+### Pakettien hallinta
+
+Paketin asennus aktiiviseen ympäristöön:
+
+```
+conda install -c conda-forge <paketin nimi>
+```
+
+Huomaa `-c conda-forge`! Tällä määritellään mistä kanavasta (channel) paketti
+ladataan. Conda-forge on lähes aina suositeltavin vaihtoehto.
+
+Paketin poisto:
+
+```
+conda remove <paketin nimi>
+```
