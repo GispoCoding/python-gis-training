@@ -1,24 +1,27 @@
-<!-- TODO overall shorten this file? -->
-
 # Kurssiympäristö
 
 ## Kurssihakemisto ja sen lataaminen
 
-<!-- TODO add filename of the zip to instructions -->
-
-Lataa kurssimateriaali alla olevasta linkistä, ja pura `.zip`-tiedosto paikkaan
-josta löydät sen kurssilla: esimerkiksi kotihakemistoosi. Älä kuitenkaan käytä
-verkkolevyä.
+Lataa kurssimateriaali alla olevasta linkistä, ja pura `.zip`-tiedosto
+hakemiston `C:\Ohjelmat\miniconda3` alle. Tietokoneellesi tehty Python-asennus
+on tehty siten, että pythonin kanssa työskentely kannattaa tehdä tämän
+hakemiston sisällä.
 
 [Kurssimateriaali.zip](https://github.com/GispoCoding/python-gis-training/archive/refs/heads/main.zip)
 
-<!-- TODO what would be a sensible location on windows? -->
+Kun olet purkanut kurssimateriaalin oikeaan paikkaan, on tiedostopolku
+kurssimateriaaliin seuraavanlainen:
 
-Windows-käyttöjärjestelmässä kotihakemistolla tarkoitetaan hakemistoa, jonka
-tiedostopolku on seuraavanlainen:
+```
+C:\Ohjelmat\miniconda3\python-gis-training-main
+```
 
-```console
-C:\Users\<käyttäjätunnus>
+> **Huom!** Riippuen siitä, miten purit tiedoston, saattaa varsinainen
+> kurssimateriaalihakemisto olla vielä erillisen samannimisen hakemiston
+> sisällä. Tämä ei haittaa. Alla esimerkkipolku tässä tapauksessa:
+
+```
+C:\Ohjelmat\miniconda3\python-gis-training-main\python-gis-training-main
 ```
 
 ## Komentorivi ja kurssihakemistoon navigointi (windows)
@@ -28,13 +31,12 @@ C:\Users\<käyttäjätunnus>
 Kurssilla käytetään Python-pakettien sekä -ympäristöjen hallintaan
 komentorivikäyttöliittymää, tarkemmin sanottuna **Anaconda
 Prompt**-komentoriviä. Anaconda Promptin löydät Windowsilla esimerkiksi
-etsimällä sanalla "Anaconda". Jos ohjelma ei ole asennettuna, asenna se
-[ohjeiden mukaan](./asennukset-windows.md).
+etsimällä sanalla "Anaconda".
 
 Avaa nyt **Anaconda Prompt**. Avautuvassa ikkunassa näkyy teksti `(base)`, sekä
 tiedostopolku. `(base)` tarkoittaa sitä, että tällä hetkellä aktiivinen
 conda-**ympäristö** on nimeltään `base`, kun taas tiedostopolku näyttää polun
-siihen hakemiston, jossa komentorivi on nyt aktiivinen. Kulloinkin aktiivisena
+siihen hakemistoon, jossa komentorivi on nyt aktiivinen. Kulloinkin aktiivisena
 olevaa hakemistoa kutsutaan **työhakemistoksi** (working directory), ja sitä
 voidaan muuttaa navigoimalla johonkin muuhun hakemistoon.
 
@@ -48,31 +50,23 @@ muutakin komentoa kannattaa opetella: `dir` ja `cd`.
   annettuun hakemistoon.
 
 Työhakemistolla (ja täten myös komentorivillä navigoinnilla) on merkitystä
-sellaisten komentojen kannalta, jotka täytyy tai kannattaa suorittaa tietyssä
-hakemistossa. Yksi esimerkki tällaisesta komennosta on kurssilla käytettävä
-**JupyterLab**-ohjelmointityökalu: JupyterLabin selainkäyttöliittymä aukeaa
-siihen hakemistoon, jossa ohjelman käynnistävä `jupyter lab` -komento ajetaan.
-Kannattaa siis aina käynnistää JupyterLab ajamalla `jupyter lab` siinä
-hakemistossa, jossa aiot myös työskennellä.
+tilanteissa, joissa komentoja täytyy tai kannattaa suorittaa tietyssä
+hakemistossa. Python-ympäristön luonti, tai kurssilla käytettävän
+**JupyterLab**-ohjelmointityökalun käynnistys ovat esimerkkejä tällaisista
+tilanteista.
 
-Navigoi siis kurssihakemistoon. Jos et muista ulkoa minne tallensit
-kurssihakemiston, voit etsiä sen **Resurssienhallinnalla**. TODO Miten saada
-absoluuttinen polku windowsilla?
+Navigoi siis kurssihakemistoon. Koska tiedät jo minne kurssihakemisto on
+tallennettu, voit siirtyä sinne seuraavalla komennolla:
 
-Jos tallensit kurssihakemiston jonnekkin kotihakemistosi sisälle, on polun alku
-muotoa:
-
-```console
-C:\Users\<käyttäjätunnus>\...
+```
+cd C:\Ohjelmat\miniconda3\python-gis-training-main
 ```
 
-Jos kurssihakemistosi on esimerkisi suoraan kotihakemistossasi, voit siirtyä
-sinne seuraavalla komennolla:
+Jos `dir`-komento näyttää, että hakemiston sisällä on vielä yksi
+`python-gis-training-main`-niminen hakemisto, siirry vielä sinne:
 
-<!-- TODO check path (i.e. the repo name) when downloaded -->
-
-```console
-cd C:\Users\<käyttäjänimi>\python-gis-training
+```
+cd python-gis-training-main
 ```
 
 ## Kurssiympäristön luominen
@@ -129,6 +123,11 @@ jupyter lab
 JupyterLabin pitäisi käynnistyä internet-selaimessa. Jos selainsivu ei aukea
 automaattisesti, kopioi komentorivi-ikkunassa näkyvä linkki selaimen
 URL-kenttään.
+
+Huomaat, että JupyterLabin käyttöliittymä aukesi kurssihakemistoosi. Tämä johtuu
+siitä, että ajoit `jupyter lab` -komennon kurssihakemistossa. Kannattaa siis
+aina käynnistää JupyterLab ajamalla `jupyter lab` siinä hakemistossa, jossa aiot
+myös työskennellä.
 
 ## Kurssiympäristön käyttö jatkossa
 
