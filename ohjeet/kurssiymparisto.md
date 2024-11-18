@@ -174,6 +174,12 @@ Ympäristön aktivointi:
 conda activate <ympäristön nimi>
 ```
 
+Aktiivisen ympäristön deaktivointi:
+
+```
+conda deactivate
+```
+
 Olemassaolevien ympäristöjen listaus:
 
 ```
@@ -197,7 +203,7 @@ conda install -c conda-forge <paketin nimi>
 Huomaa `-c conda-forge`! Tällä määritellään mistä kanavasta (channel) paketti
 ladataan. Conda-forge on lähes aina suositeltavin vaihtoehto.
 
-Paketin poisto:
+Paketin poisto aktiivisesta ympäristöstä:
 
 ```
 conda remove <paketin nimi>
