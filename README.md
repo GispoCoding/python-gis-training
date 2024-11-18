@@ -6,7 +6,6 @@ Ohjeita:
 
 - [Asennusohjeet - windows](./ohjeet/asennukset-windows.md)
 - [Kurssiympäristö ja sen käyttöönotto](./ohjeet/kurssiymparisto.md)
-- [Conda-paketinhallinnan perusteet](./ohjeet/condan-perusteet.md)
 
 Kehittäjälle:
 
