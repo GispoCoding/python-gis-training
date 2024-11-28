@@ -9,5 +9,5 @@ dependencies:
 
   - geopandas=1.0.1
   - folium
-  - jupyterlab
+  - jupyterlab=4.3.0
   - matplotlib
