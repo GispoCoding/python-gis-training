@@ -200,8 +200,18 @@ Paketin asennus aktiiviseen ympäristöön:
 conda install -c conda-forge <paketin nimi>
 ```
 
-Huomaa `-c conda-forge`! Tällä määritellään mistä kanavasta (channel) paketti
-ladataan. Conda-forge on lähes aina suositeltavin vaihtoehto.
+> [!TIP]
+>
+> Huomaa `-c conda-forge`! Tällä määritellään mistä kanavasta (channel) paketti
+> ladataan. Conda-forge on lähes aina suositeltavin vaihtoehto.
+
+Voit myös määritellä tarkan version, kun asennat pakettia. Samalla komennolla
+voit myös muuttaa jo asennetun paketin versiota. Esimerkiksi paketin jupyterlab
+version 4.3.0 asentaminen:
+
+```
+conda install -c conda-forge jupyterlab=4.3.0
+```
 
 Paketin poisto aktiivisesta ympäristöstä:
 
