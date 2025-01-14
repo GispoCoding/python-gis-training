@@ -1,0 +1,33 @@
+# This workflow releases a zip containing only whats necessary for a course
+# participant.
+# 
+# TODO: the action just updates the asset when the release already exists. This
+# Could be made nicer, since now the release commit points to a different state
+# than what is in the asset zip
+name: Release or update course zip
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  release-course-zip:
+    name: Release course zip
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to make releases
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Zip course
+        run: zip -r python-gis-training.zip environment.yml kurssimateriaali
+
+      - name: Make release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: default-release
+          body: A placeholder release for hosting the latest zip. Built from release branch.
+          files: python-gis-training.zip
