@@ -2,11 +2,8 @@ FROM continuumio/miniconda3:24.11.1-0
 
 ARG USER=gis-user
 ARG ENV_NAME=gis
-# ARG DEBIAN_FRONTEND=noninteractive
 
 EXPOSE 8888
-
-# RUN apt-get update && apt-get install -y vim
 
 RUN useradd --create-home $USER
 
