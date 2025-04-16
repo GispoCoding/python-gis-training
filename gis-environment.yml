@@ -1,0 +1,13 @@
+name: gis
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.12
+
+  - geopandas=1.0.1
+  - folium
+  - jupyterlab=4.3.4
+  - matplotlib
