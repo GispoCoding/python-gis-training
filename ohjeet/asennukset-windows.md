@@ -40,6 +40,8 @@ Luo testiympäristö ja aktivoi se:
 conda create --name test
 ```
 
+Kun kysytään hyväksyntää palvelun ehdoille kirjoita `a` ja paina enteriä (kolmesti)
+
 Nyt conda-komentorivi haluaa varmistuksen.
 
 Kirjoita `y` ja paina sen jälkeen enteriä.
